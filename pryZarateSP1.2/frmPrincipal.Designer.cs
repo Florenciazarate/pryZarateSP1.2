@@ -68,6 +68,7 @@ namespace pryZarateSP1._2
             // 
             // tabPageEspecialidades
             // 
+            this.tabPageEspecialidades.BackColor = System.Drawing.Color.PeachPuff;
             this.tabPageEspecialidades.Controls.Add(this.ucEspecialidades1);
             this.tabPageEspecialidades.Location = new System.Drawing.Point(4, 22);
             this.tabPageEspecialidades.Name = "tabPageEspecialidades";
@@ -75,17 +76,17 @@ namespace pryZarateSP1._2
             this.tabPageEspecialidades.Size = new System.Drawing.Size(792, 621);
             this.tabPageEspecialidades.TabIndex = 0;
             this.tabPageEspecialidades.Text = "Especialidades";
-            this.tabPageEspecialidades.UseVisualStyleBackColor = true;
             // 
             // ucEspecialidades1
             // 
             this.ucEspecialidades1.Location = new System.Drawing.Point(6, 6);
             this.ucEspecialidades1.Name = "ucEspecialidades1";
-            this.ucEspecialidades1.Size = new System.Drawing.Size(380, 300);
+            this.ucEspecialidades1.Size = new System.Drawing.Size(380, 355);
             this.ucEspecialidades1.TabIndex = 0;
             // 
             // tabPageMedicos
             // 
+            this.tabPageMedicos.BackColor = System.Drawing.Color.PeachPuff;
             this.tabPageMedicos.Controls.Add(this.ucMedicos1);
             this.tabPageMedicos.Controls.Add(this.dataGridView1);
             this.tabPageMedicos.Controls.Add(this.button1);
@@ -95,10 +96,10 @@ namespace pryZarateSP1._2
             this.tabPageMedicos.Size = new System.Drawing.Size(792, 621);
             this.tabPageMedicos.TabIndex = 1;
             this.tabPageMedicos.Text = "Médicos";
-            this.tabPageMedicos.UseVisualStyleBackColor = true;
             // 
             // ucMedicos1
             // 
+            this.ucMedicos1.BackColor = System.Drawing.Color.PeachPuff;
             this.ucMedicos1.Location = new System.Drawing.Point(6, 6);
             this.ucMedicos1.Name = "ucMedicos1";
             this.ucMedicos1.Size = new System.Drawing.Size(777, 300);
@@ -128,6 +129,7 @@ namespace pryZarateSP1._2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(800, 647);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmPrincipal";
