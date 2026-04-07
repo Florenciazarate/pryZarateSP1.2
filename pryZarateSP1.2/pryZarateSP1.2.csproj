@@ -59,6 +59,7 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClaseMedico.cs" />
     <Compile Include="Models\Especialidad.cs" />
     <Compile Include="Models\Medico.cs" />
     <Compile Include="Program.cs" />
