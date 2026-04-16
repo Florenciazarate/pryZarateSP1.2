@@ -16,10 +16,8 @@ namespace pryZarateSP1._2
         private TabControl tabControl1;
         private TabPage tabPageEspecialidades;
         private TabPage tabPageMedicos;
-        private ucEspecialidades ucEspecialidades1;
-        private ucMedicos ucMedicos1;
-        private DataGridView dataGridView1;
-        private Button button1;
+        private DataGridView dgvCargaMedicos;
+        private Button btnCargar;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -44,15 +42,15 @@ namespace pryZarateSP1._2
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageEspecialidades = new System.Windows.Forms.TabPage();
-            this.ucEspecialidades1 = new pryZarateSP1._2.Controls.ucEspecialidades();
             this.tabPageMedicos = new System.Windows.Forms.TabPage();
+            this.dgvCargaMedicos = new System.Windows.Forms.DataGridView();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.ucMedicos1 = new pryZarateSP1._2.Controls.ucMedicos();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ucEspecialidades1 = new pryZarateSP1._2.Controls.ucEspecialidades();
             this.tabControl1.SuspendLayout();
             this.tabPageEspecialidades.SuspendLayout();
             this.tabPageMedicos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargaMedicos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,7 +66,7 @@ namespace pryZarateSP1._2
             // 
             // tabPageEspecialidades
             // 
-            this.tabPageEspecialidades.BackColor = System.Drawing.Color.PeachPuff;
+            this.tabPageEspecialidades.BackColor = System.Drawing.Color.GhostWhite;
             this.tabPageEspecialidades.Controls.Add(this.ucEspecialidades1);
             this.tabPageEspecialidades.Location = new System.Drawing.Point(4, 22);
             this.tabPageEspecialidades.Name = "tabPageEspecialidades";
@@ -77,59 +75,62 @@ namespace pryZarateSP1._2
             this.tabPageEspecialidades.TabIndex = 0;
             this.tabPageEspecialidades.Text = "Especialidades";
             // 
-            // ucEspecialidades1
-            // 
-            this.ucEspecialidades1.Location = new System.Drawing.Point(6, 6);
-            this.ucEspecialidades1.Name = "ucEspecialidades1";
-            this.ucEspecialidades1.Size = new System.Drawing.Size(380, 355);
-            this.ucEspecialidades1.TabIndex = 0;
-            // 
             // tabPageMedicos
             // 
-            this.tabPageMedicos.BackColor = System.Drawing.Color.PeachPuff;
+            this.tabPageMedicos.BackColor = System.Drawing.Color.GhostWhite;
             this.tabPageMedicos.Controls.Add(this.ucMedicos1);
-            this.tabPageMedicos.Controls.Add(this.dataGridView1);
-            this.tabPageMedicos.Controls.Add(this.button1);
+            this.tabPageMedicos.Controls.Add(this.dgvCargaMedicos);
+            this.tabPageMedicos.Controls.Add(this.btnCargar);
             this.tabPageMedicos.Location = new System.Drawing.Point(4, 22);
             this.tabPageMedicos.Name = "tabPageMedicos";
             this.tabPageMedicos.Padding = new System.Windows.Forms.Padding(6);
             this.tabPageMedicos.Size = new System.Drawing.Size(792, 621);
             this.tabPageMedicos.TabIndex = 1;
             this.tabPageMedicos.Text = "Médicos";
+            this.tabPageMedicos.Click += new System.EventHandler(this.tabPageMedicos_Click);
+            // 
+            // dgvCargaMedicos
+            // 
+            this.dgvCargaMedicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCargaMedicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCargaMedicos.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dgvCargaMedicos.Location = new System.Drawing.Point(9, 346);
+            this.dgvCargaMedicos.Name = "dgvCargaMedicos";
+            this.dgvCargaMedicos.Size = new System.Drawing.Size(758, 238);
+            this.dgvCargaMedicos.TabIndex = 1;
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(9, 312);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(120, 28);
+            this.btnCargar.TabIndex = 2;
+            this.btnCargar.Text = "Cargar Médicos";
+            this.btnCargar.Click += new System.EventHandler(this.button1_Click);
             // 
             // ucMedicos1
             // 
-            this.ucMedicos1.BackColor = System.Drawing.Color.PeachPuff;
+            this.ucMedicos1.BackColor = System.Drawing.Color.GhostWhite;
             this.ucMedicos1.Location = new System.Drawing.Point(6, 6);
             this.ucMedicos1.Name = "ucMedicos1";
             this.ucMedicos1.Size = new System.Drawing.Size(777, 300);
             this.ucMedicos1.TabIndex = 0;
             // 
-            // dataGridView1
+            // ucEspecialidades1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 346);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(758, 238);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cargar Médicos";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ucEspecialidades1.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucEspecialidades1.Location = new System.Drawing.Point(9, 9);
+            this.ucEspecialidades1.Name = "ucEspecialidades1";
+            this.ucEspecialidades1.Size = new System.Drawing.Size(752, 355);
+            this.ucEspecialidades1.TabIndex = 0;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 647);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmPrincipal";
@@ -138,11 +139,14 @@ namespace pryZarateSP1._2
             this.tabControl1.ResumeLayout(false);
             this.tabPageEspecialidades.ResumeLayout(false);
             this.tabPageMedicos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCargaMedicos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private ucMedicos ucMedicos1;
+        private ucEspecialidades ucEspecialidades1;
     }
 }

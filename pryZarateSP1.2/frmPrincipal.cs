@@ -28,7 +28,7 @@ namespace pryZarateSP1._2
         private void button1_Click(object sender, EventArgs e)
         {
             List<Medico> medicos = Repository.GetMedicos().ToList();
-            dataGridView1.DataSource = medicos.Select(m => new { Matricula = m.Matricula, Nombre = m.Nombre, EspecialidadId = m.EspecialidadId }).ToList();
+            dgvCargaMedicos.DataSource = medicos.Select(m => new { Matricula = m.Matricula, Nombre = m.Nombre, EspecialidadId = m.EspecialidadId }).ToList();
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -42,6 +42,9 @@ namespace pryZarateSP1._2
             ucMedicos1.CargarEspecialidades();
         }
 
- 
+        private void tabPageMedicos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
