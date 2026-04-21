@@ -49,8 +49,14 @@
     <Compile Include="Controls\ucEspecialidades.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\ucEspecialidades.Designer.cs">
+      <DependentUpon>ucEspecialidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ucMedicos.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucMedicos.Designer.cs">
+      <DependentUpon>ucMedicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Repository.cs" />
     <Compile Include="frmPrincipal.cs">

@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using pryZarateSP1._2.Models;
 using pryZarateSP1._2.Data;
-using pryZarateSP1._2.Controls;
 
 namespace pryZarateSP1._2
 {
@@ -13,13 +13,17 @@ namespace pryZarateSP1._2
         public frmPrincipal()
         {
             InitializeComponent();
-            ucEspecialidades1.EspecialidadAdded += (s, e) => ucMedicos1.CargarEspecialidades();
-            tabControl1.SelectedIndexChanged += TabControl1_SelectedIndexChanged;
+            ucEspecialidades1.EspecialidadAdded += ucEspecialidades1_EspecialidadAdded;
         }
 
-        private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ucEspecialidades1_EspecialidadAdded(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab == tabPageMedicos)
+            ucMedicos1.CargarEspecialidades();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabGestion.SelectedTab == tabPageMedicos)
             {
                 ucMedicos1.CargarEspecialidades();
             }
@@ -33,16 +37,14 @@ namespace pryZarateSP1._2
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            CargarEspecialidades();
-        }
-
-        private void CargarEspecialidades()
-        {
             ucEspecialidades1.LoadEspecialidades();
             ucMedicos1.CargarEspecialidades();
         }
 
-        private void tabPageMedicos_Click(object sender, EventArgs e)
+        private void btnCargar_MouseEnter(object sender, EventArgs e) { btnCargar.BackColor = Color.FromArgb(56, 178, 172); }
+        private void btnCargar_MouseLeave(object sender, EventArgs e) { btnCargar.BackColor = Color.FromArgb(44, 122, 123); }
+
+        private void ucEspecialidades1_Load(object sender, EventArgs e)
         {
 
         }
