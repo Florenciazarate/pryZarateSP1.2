@@ -43,10 +43,5 @@ namespace pryZarateSP1._2
 
         private void btnCargar_MouseEnter(object sender, EventArgs e) { btnCargar.BackColor = Color.FromArgb(56, 178, 172); }
         private void btnCargar_MouseLeave(object sender, EventArgs e) { btnCargar.BackColor = Color.FromArgb(44, 122, 123); }
-
-        private void ucEspecialidades1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

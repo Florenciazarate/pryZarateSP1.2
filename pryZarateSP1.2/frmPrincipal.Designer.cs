@@ -117,7 +117,6 @@ namespace pryZarateSP1._2
             this.ucEspecialidades1.Padding = new System.Windows.Forms.Padding(20);
             this.ucEspecialidades1.Size = new System.Drawing.Size(892, 708);
             this.ucEspecialidades1.TabIndex = 0;
-            this.ucEspecialidades1.Load += new System.EventHandler(this.ucEspecialidades1_Load);
             // 
             // tabPageMedicos
             // 
